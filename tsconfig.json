@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "tsparticles-engine"],
     "target": "es5",
     "lib": [
       "dom",

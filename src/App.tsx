@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './app/contexts/AuthContext';
+import { PrivateRoute } from './app/hooks/PrivateRoute';
+import PatientSummaryPage from './components/patients/PatientSummaryPage';
+import CreateUserPage from './pages/admin/CreateUserPage';
+import LoginPage from './pages/auth/LoginPage';
+import Dashboard from './pages/Dashboard';
+import LandingPage from './pages/LandingPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/patients/:id" element={<PatientSummaryPage />} />
+            <Route path="/admin/create-user" element={<CreateUserPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
