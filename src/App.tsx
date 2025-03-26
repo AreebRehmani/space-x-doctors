@@ -6,14 +6,16 @@ import CreateUserPage from './pages/admin/CreateUserPage';
 import LoginPage from './pages/auth/LoginPage';
 import Dashboard from './pages/Dashboard';
 import LandingPage from './pages/LandingPage';
-
+import './styles/global.scss';
+import LandingPage2 from './pages/LandingPage2';
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          {/* <Route path="/" element={<LandingPage />} /> */}
+          <Route path="/" element={<LandingPage2 />} />
           <Route path="/login" element={<LoginPage />} />
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />

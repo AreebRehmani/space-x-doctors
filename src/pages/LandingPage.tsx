@@ -10,7 +10,7 @@ import { Box, Typography, Button, Container as MuiContainer } from "@mui/materia
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { polygonDeer } from "../components/animations/ts-particles";
-
+import { saturnParticle } from "../components/animations/saturn-particles";
 
 const LandingPage = () => {
     const [init, setInit] = useState(false);
@@ -27,12 +27,12 @@ const LandingPage = () => {
     };
 
     // Cast our raw JSON config as ISourceOptions.
-    const particlesOptions: ISourceOptions = polygonDeer as unknown as ISourceOptions;
+    const particlesOptions: ISourceOptions = saturnParticle as unknown as ISourceOptions;
 
     if (!init) return <></>;
 
     return (
-        <MuiContainer maxWidth="xl" sx={{ minHeight: "100vh", position: "relative" }}>
+        <MuiContainer id='landing-page-container' maxWidth="xl" sx={{ width: '98%', marginLeft: '1%' , minHeight: "95vh", position: "relative" }}>
             <Particles
                 id="tsparticles"
                 particlesLoaded={particlesLoaded}
@@ -46,42 +46,46 @@ const LandingPage = () => {
                 }}
             />
             <Box
+                id='landing-page-content-box'
                 sx={{
                     position: "relative",
                     zIndex: 1,
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
-                    minHeight: "100vh",
+                    minHeight: "80vh",
                     py: 8,
+                    paddingTop: '1%'
                 }}
             >
                 <Box
                     ref={ref}
+                    id='heading-container'
                     sx={{
                         opacity: inView ? 1 : 0,
                         transform: inView ? "translateY(0)" : "translateY(20px)",
                         transition: "opacity 0.6s ease-in-out, transform 0.6s ease-in-out",
                         mb: 8,
+                        marginTop: '2%'
                     }}
                 >
                     <Typography
                         variant="h2"
                         component="h1"
                         gutterBottom
-                        sx={{ fontSize: { xs: "2rem", md: "3rem" } }}
+                        sx={{ fontSize: { xs: "2rem", md: "2.7rem" }, marginBottom: '2px' }}
                     >
                         SpaceX Doctors
                     </Typography>
                     <Typography
                         variant="h5"
                         component="p"
-                        sx={{ fontSize: { xs: "1rem", md: "1.2rem" } }}
-                    >
-                        Revolutionizing Medical Management with Cutting-Edge Technology
+                        sx={{ fontFamily: 'math' ,fontSize: { xs: "1rem", md: "1.2rem" } }}
+                    ><i> Revolutionizing Medical Management.</i>
                     </Typography>
                 </Box>
+
                 <Box
+                    id='description-1'
                     ref={ref}
                     sx={{
                         opacity: inView ? 1 : 0,
@@ -90,7 +94,7 @@ const LandingPage = () => {
                         mb: 8,
                     }}
                 >
-                    <Typography variant="h6" component="p" sx={{ maxWidth: "600px" }}>
+                    <Typography variant="h6" component="p" sx={{ maxWidth: "400px" }}>
                         Our platform empowers medical professionals with efficient patient management, intelligent analytics, and seamless collaboration tools.
                     </Typography>
                 </Box>

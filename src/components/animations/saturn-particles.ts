@@ -1,10 +1,8 @@
-export const polygonDeer = {
+export const saturnParticle = {
     "autoPlay": true,
     "background": {
-        "color": {
-            "value": "#000000"
-        },
-        "image": "",
+        "color": { "value": "#000000" },
+        "image": "url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1920\" height=\"1080\"><defs><radialGradient id=\"grad\" cx=\"50%\" cy=\"50%\" r=\"50%\" fx=\"50%\" fy=\"50%\"><stop offset=\"0%\" style=\"stop-color:%23800080;stop-opacity:1\" /><stop offset=\"100%\" style=\"stop-color:%23000000;stop-opacity:1\" /></radialGradient></defs><rect width=\"100%\" height=\"100%\" fill=\"url(%23grad)\" /></svg>')",
         "position": "50% 50%",
         "repeat": "no-repeat",
         "size": "cover",
@@ -34,7 +32,7 @@ export const polygonDeer = {
         "detectsOn": "window",
         "events": {
             "onClick": {
-                "enable": false,
+                "enable": true,
                 "mode": "push"
             },
             "onDiv": {
@@ -45,10 +43,10 @@ export const polygonDeer = {
             },
             "onHover": {
                 "enable": true,
-                "mode": "bubble",
+                "mode": "grab",
                 "parallax": {
-                    "enable": false,
-                    "force": 2,
+                    "enable": true,
+                    "force": 60,
                     "smooth": 10
                 }
             },
@@ -75,11 +73,11 @@ export const polygonDeer = {
                 "distance": 200
             },
             "bubble": {
-                "distance": 40,
+                "distance": 400,
                 "duration": 2,
                 "mix": false,
-                "opacity": 8,
-                "size": 6,
+                "opacity": 0.8,
+                "size": 40,
                 "divs": {
                     "distance": 200,
                     "duration": 0.4,
@@ -128,8 +126,8 @@ export const polygonDeer = {
                 }
             },
             "slow": {
-                "factor": 1,
-                "radius": 0
+                "factor": 3,
+                "radius": 200
             },
             "particle": {
                 "replaceCursor": false,
@@ -188,7 +186,7 @@ export const polygonDeer = {
             }
         },
         "color": {
-            "value": "rgb(255, 255, 255)",
+            "value": "#ffffff",
             "animation": {
                 "h": {
                     "count": 0,
@@ -265,15 +263,15 @@ export const polygonDeer = {
                 "options": {}
             },
             "outModes": {
-                "default": "bounce",
-                "bottom": "bounce",
-                "left": "bounce",
-                "right": "bounce",
-                "top": "bounce"
+                "default": "out",
+                "bottom": "out",
+                "left": "out",
+                "right": "out",
+                "top": "out"
             },
             "random": false,
             "size": false,
-            "speed": 1,
+            "speed": 2,
             "spin": {
                 "acceleration": 0,
                 "enable": false
@@ -289,7 +287,7 @@ export const polygonDeer = {
         },
         "number": {
             "density": {
-                "enable": false,
+                "enable": true,
                 "width": 1920,
                 "height": 1080
             },
@@ -297,17 +295,17 @@ export const polygonDeer = {
                 "mode": "delete",
                 "value": 0
             },
-            "value": 200
+            "value": 100
         },
         "opacity": {
             "value": {
-                "min": 0.05,
-                "max": 0.4
+                "min": 0.1,
+                "max": 0.5
             },
             "animation": {
                 "count": 0,
                 "enable": true,
-                "speed": 2,
+                "speed": 3,
                 "decay": 0,
                 "delay": 0,
                 "sync": false,
@@ -335,11 +333,14 @@ export const polygonDeer = {
             "type": "circle"
         },
         "size": {
-            "value": 1,
+            "value": {
+                "min": 1,
+                "max": 10
+            },
             "animation": {
                 "count": 0,
-                "enable": false,
-                "speed": 5,
+                "enable": true,
+                "speed": 20,
                 "decay": 0,
                 "delay": 0,
                 "sync": false,
@@ -463,7 +464,7 @@ export const polygonDeer = {
                 "value": "#ffffff"
             },
             "consent": false,
-            "distance": 30,
+            "distance": 150,
             "enable": true,
             "frequency": 1,
             "opacity": 0.4,
@@ -497,41 +498,13 @@ export const polygonDeer = {
     "style": {},
     "themes": [],
     "zLayers": 100,
-    "key": "polygonMask",
-    "name": "Polygon Mask",
+    "key": "parallax",
+    "name": "Parallax",
     "motion": {
         "disable": false,
         "reduce": {
             "factor": 4,
             "value": true
-        }
-    },
-    "polygon": {
-        "draw": {
-            "enable": true,
-            "stroke": {
-                "color": {
-                    "value":"rgba(0, 255, 255, 0.64)"
-                },
-                "width": 1,
-                "opacity": 0.3
-            }
-        },
-        "enable": true,
-        "inline": {
-            "arrangement": "equidistant"
-        },
-        "move": {
-            "radius": 10,
-            "type": "path"
-        },
-        // Updated scale value to cover more of the page.
-        "scale": 0.8,
-        "type": "inline",
-        "url": "https://particles.js.org/images/smalldeer.svg",
-        "position": {
-            "x": 50,
-            "y": 50
         }
     }
 };
