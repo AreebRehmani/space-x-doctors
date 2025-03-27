@@ -5,9 +5,8 @@ import PatientSummaryPage from './components/patients/PatientSummaryPage';
 import CreateUserPage from './pages/admin/CreateUserPage';
 import LoginPage from './pages/auth/LoginPage';
 import Dashboard from './pages/Dashboard';
-import LandingPage from './pages/LandingPage';
 import './styles/global.scss';
-import LandingPage2 from './pages/LandingPage2';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<LandingPage />} /> */}
-          <Route path="/" element={<LandingPage2 />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
