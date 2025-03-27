@@ -13,7 +13,6 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<LandingPage />} /> */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route element={<PrivateRoute />}>
