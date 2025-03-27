@@ -88,7 +88,7 @@ const LandingPage = () => {
                             <Typography variant="h2" component="h1" gutterBottom sx={{ fontSize: { xs: "2rem", md: "2.7rem" }, marginBottom: '2px' }}>
                                 SpaceX Doctors
                             </Typography>
-                            <Typography variant="h5" component="p" sx={{ fontFamily: 'math', fontSize: { xs: "1rem", md: "1.2rem" } }}>
+                            <Typography variant="h5" component="p" sx={{ fontFamily: 'ui-monospace', fontSize: { xs: "1rem", md: "1.2rem" } }}>
                                 <i> Revolutionizing Medical Management.</i>
                             </Typography>
                         </Box>
@@ -100,9 +100,18 @@ const LandingPage = () => {
                             transition: "opacity 0.6s ease-in-out 0.2s, transform 0.6s ease-in-out 0.2s",
                             mb: 8,
                         }}>
-                            <Typography variant="h6" component="p" sx={{ maxWidth: "400px" }}>
+                            <Typography variant="h6" component="p" sx={{ maxWidth: "400px", fontFamily: 'monospace' }}>
                                 Our platform empowers medical professionals with efficient patient management, intelligent analytics, and seamless collaboration tools.
                             </Typography>
+
+                            <div id='get-start-btn' style={{ position: 'absolute', marginTop: '17%' }}>
+                                <button className="sparkles" style={{ height: '68px', width: '100%', marginLeft: '-1%' }}>
+                                    <span style={{ paddingTop: '10px' }}>Get Started</span>
+                                </button>
+                            </div>
+
+                            <Typography style={{ fontFamily: 'ui-monospace', fontStyle: 'italic', color: 'white', position: 'absolute', paddingTop: '47vh', marginLeft: '-4vw' }}>SpaceX Doctors by <i>Areeb Rehmani</i></Typography>
+
                         </Box>
                     </Box>
 
@@ -113,17 +122,14 @@ const LandingPage = () => {
                         display: 'flex',
                         justifyContent: 'center'
                     }}>
-                        <img
+                        <img onClick={() => parallax.current.scrollTo(1)}
                             src="https://cdn-icons-png.flaticon.com/512/2719/2719411.png"
                             style={{ width: '50%' }}
                             alt="Centered Icon"
                         />
-                        <div id='get-start-btn' style={{ position: 'absolute', marginTop: '25%' }}>
-                            <button onClick={() => parallax.current.scrollTo(1)} className="sparkles" style={{ height: '68px', minWidth: '104%', marginLeft: '-1%' }}>
-                                <span style={{ paddingTop: '10px' }}>Get Started</span>
-                            </button>
-                        </div>
+
                     </Box>
+
                 </ParallaxLayer>
 
                 {/* PAGE 1 (Middle Section) */}
