@@ -105,7 +105,7 @@ const LandingPage = () => {
                             </Typography>
 
                             <div id='get-start-btn' style={{ position: 'absolute', marginTop: '17%' }}>
-                                <button className="sparkles" style={{ height: '68px', width: '100%', marginLeft: '-1%' }}>
+                                <button className="sparkles" style={{ zIndex: 99, height: '68px', width: '100%', marginLeft: '-1%' }}>
                                     <span style={{ paddingTop: '10px' }}>Get Started</span>
                                 </button>
                             </div>
