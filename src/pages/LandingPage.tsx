@@ -106,7 +106,7 @@ const LandingPage = () => {
 
                             <div id='get-start-btn' style={{ position: 'absolute', marginTop: '17%' }}>
                                 <button className="sparkles" style={{ zIndex: 99, height: '68px', width: '100%', marginLeft: '-1%' }}>
-                                    <span style={{ paddingTop: '10px' }}>Get Started</span>
+                                    <span style={{ paddingTop: '10px', fontSize: '1em' }}>Get Started</span>
                                 </button>
                             </div>
 
@@ -122,6 +122,7 @@ const LandingPage = () => {
                         display: 'flex',
                         justifyContent: 'center'
                     }}>
+
                         <img onClick={() => parallax.current.scrollTo(1)}
                             src="https://cdn-icons-png.flaticon.com/512/2719/2719411.png"
                             style={{ width: '50%' }}
@@ -129,6 +130,17 @@ const LandingPage = () => {
                         />
 
                     </Box>
+
+                    <div id='login-btn' style={{ position: 'absolute', marginTop: '-89vh', marginLeft: '89vw' }}>
+                        <button className="sparkles" style={{ zIndex: 99, height: '45px', width: '104%', marginLeft: '-1%' }}>
+                            <span style={{ paddingTop: '5px', fontSize: '0.6em' }}>Login</span>
+                        </button>
+                    </div>
+
+                    <div style={{ position: 'absolute', marginLeft: '58vw', marginTop: '52vh' }}>
+                        <img style={{ height: '48vh' }} src="/pics/cutout.png" alt="Cutout" />
+                    </div>
+
 
                 </ParallaxLayer>
 
