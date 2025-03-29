@@ -8,6 +8,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
 import './../styles/landingPage.scss';
+import PatientSVG from '../icons/patientSVG';
 
 const url = (name: string, wrap = false) =>
     `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -89,7 +90,7 @@ const LandingPage = () => {
                                 SpaceX Doctors
                             </Typography>
                             <Typography variant="h5" component="p" sx={{ fontFamily: 'ui-monospace', fontSize: { xs: "1rem", md: "1.2rem" } }}>
-                                <i> Revolutionizing Medical Management.</i>
+                                <i>Revolutionizing Healthcare Management for Doctors.</i>
                             </Typography>
                         </Box>
 
@@ -101,7 +102,7 @@ const LandingPage = () => {
                             mb: 8,
                         }}>
                             <Typography variant="h6" component="p" sx={{ maxWidth: "400px", fontFamily: 'monospace' }}>
-                                Our platform empowers medical professionals with efficient patient management, intelligent analytics, and seamless collaboration tools.
+                                Effortlessly manage patient data and thier live appointments, sync prescriptions with chemists, track revenue, and gain powerful insights <br />— All in one place.
                             </Typography>
 
                             <div id='get-start-btn' style={{ position: 'absolute', marginTop: '17%' }}>
@@ -145,10 +146,29 @@ const LandingPage = () => {
                 </ParallaxLayer>
 
                 {/* PAGE 1 (Middle Section) */}
-                <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+                <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'rgb(33 33 33)', opacity: '0.85' }} />
 
                 {/* Background Clouds */}
-                <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
+                <ParallaxLayer offset={1} speed={0.8} style={{}}>
+                    <Box id='page-2-description' sx={{
+                        mb: 8,
+                        zIndex: 99,
+                        marginLeft: '5vw',
+                        transform: inView ? "translateY(0)" : "translateY(20px)",
+                        transition: "opacity 0.6s ease-in-out 0.2s, transform 0.6s ease-in-out 0.2s",
+                    }}>
+                        <Typography variant="h6" component="p" sx={{ maxWidth: "400px", fontFamily: 'ui-monospace', marginTop: '2vh' }}>
+                            <span id='page2-heading' style={{ fontSize: '1.5em' }}> Key Features Highlight: </span>
+                            <ul style={{ fontSize: '0.92em', padding: '5px' }}>
+                                <li>🏥 Seamless Patient Management - Keep all patient records, histories, and prescriptions organized.</li>
+                                <li style={{ marginTop: '1.5vh' }}>📅 Smart Appointment Scheduling – Doctor's receptionist can efficiently manage and serialize patient appointments for a smooth workflow.</li>
+                                <li style={{ marginTop: '1.5vh' }}>💊 Prescription Syncing – Share prescriptions instantly with partnered chemists.</li>
+                                <li style={{ marginTop: '1.5vh' }}>📊 Smart Analytics – Track patient visits, treatments, and revenue growth with insightful charts.</li>
+                                <li style={{ marginTop: '1.5vh' }}>🔒 Secure & Compliant – Your data is encrypted and HIPAA/GDPR-compliant.</li>
+                            </ul>
+
+                        </Typography>
+                    </Box>
                     <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
                     <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
                 </ParallaxLayer>
@@ -172,17 +192,16 @@ const LandingPage = () => {
                 <ParallaxLayer
                     offset={1}
                     speed={0.1}
-                    onClick={() => parallax.current.scrollTo(2)}
                     style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                     }}>
-                    <img src={url('server')} style={{ width: '20%' }} />
+                    <img onClick={() => parallax.current.scrollTo(2)} src={url('server')} style={{ width: '20%' }} />
                 </ParallaxLayer>
 
                 {/* PAGE 2 (Bottom Section) */}
-                <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+                <ParallaxLayer offset={2} speed={1} style={{ background: 'linear-gradient(to bottom, rgb(47, 38, 91), rgb(124, 113, 188))', opacity: '0.4' }} />
 
                 <ParallaxLayer offset={2.5} speed={-0.4} style={{
                     display: 'flex',
@@ -193,14 +212,25 @@ const LandingPage = () => {
                     <img src={url('earth')} style={{ width: '60%' }} />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={2} speed={-0.3} style={{
-                    backgroundSize: '80%',
-                    backgroundPosition: 'center',
-                    backgroundImage: url('clients', true),
-                }} />
+                <ParallaxLayer
+                    offset={2}
+                    speed={-0.3}
+                    style={{
+                        backgroundSize: '80%',
+                        backgroundPosition: 'center',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        position: 'relative', // Important for absolute positioning of child elements
+                    }}
+                >
+                    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+                        <PatientSVG />
+                    </div>
+                </ParallaxLayer>
 
-                <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-                    <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+                <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 1 }}>
+                    <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%', opacity: '0.5' }} />
                     <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
                 </ParallaxLayer>
 
@@ -212,12 +242,32 @@ const LandingPage = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                    }}
-                    onClick={() => parallax.current.scrollTo(0)}>
-                    <img src={url('clients-main')} style={{ width: '40%' }} />
+                    }}>
+                    <Box id='page-2-description' sx={{
+                        mb: 8,
+                        zIndex: 99,
+                        marginLeft: '5vw',
+                        marginTop: '-70vh',
+                        transform: inView ? "translateY(0)" : "translateY(20px)",
+                        transition: "opacity 0.6s ease-in-out 0.2s, transform 0.6s ease-in-out 0.2s",
+                        position: 'absolute',
+                        width: '100vw',
+                    }}>
+                        <Typography variant="h6" component="p" sx={{ display: 'contents', width: "100vw", fontFamily: 'monospace', marginTop: '5vh' }}>
+                            <span id='page2-heading' style={{ fontSize: '1.5em' }}> Customizations to Fit Your Practice: </span>
+                            <br />
+                            Every clinic is unique—so is our platform. Personalize dashboards, reports, and patient workflows just the way you want.
+                        </Typography>
+                        <div id='start-free-trial' style={{ maxWidth: '15vw', paddingTop: '6vh' }}>
+                            <button className="sparkles" style={{ zIndex: 99, height: '45px', width: '104%', marginLeft: '-1%' }}>
+                                <span style={{ paddingTop: '7px', fontSize: '0.6em' }}>Start for free</span>
+                            </button>
+                        </div>
+                    </Box>
+                    <img onClick={() => parallax.current.scrollTo(0)} src="/pics/clients-main.png" style={{ width: '40%' }} />
                 </ParallaxLayer>
             </Parallax>
-        </div>
+        </div >
     )
 }
 
