@@ -6,7 +6,7 @@ import { saturnParticle } from '../components/animations/saturn-particles';
 import { loadAll } from '@tsparticles/all';
 import { Box, Typography, Button } from '@mui/material';
 import { useInView } from "react-intersection-observer";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './../styles/landingPage.scss';
 import PatientSVG from '../icons/patientSVG';
 
@@ -21,6 +21,7 @@ const LandingPage = () => {
         console.log("tsParticles loaded:", container);
     };
     const particlesOptions: ISourceOptions = saturnParticle as unknown as ISourceOptions;
+    const navigate = useNavigate()
 
     useEffect(() => {
         initParticlesEngine(async (engine: Engine) => {
@@ -133,7 +134,7 @@ const LandingPage = () => {
                     </Box>
 
                     <div id='login-btn' style={{ position: 'absolute', marginTop: '-89vh', marginLeft: '89vw' }}>
-                        <button className="sparkles" style={{ zIndex: 99, height: '45px', width: '104%', marginLeft: '-1%' }}>
+                        <button onClick={() => navigate("login")} className="sparkles" style={{ zIndex: 99, height: '45px', width: '104%', marginLeft: '-1%' }}>
                             <span style={{ paddingTop: '5px', fontSize: '0.6em' }}>Login</span>
                         </button>
                     </div>
