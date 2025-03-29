@@ -28,11 +28,16 @@ const PatientSVG = () => {
                         <circle id="green" fill="#34B18F" cx="28" cy="4" r="4"></circle>
                     </g>
                     <text x="35" y="30" fontSize="8" fill="#333" fontWeight="bold">Recent Patients</text>
-                    <text x="55" y="45" fontSize="7" fill="#333">- John Doe</text>
-                    <text x="55" y="60" fontSize="7" fill="#333">- Alice Smith</text>
-                    <text x="55" y="75" fontSize="7" fill="#333">- Robert Johnson</text>
-                    <text x="55" y="90" fontSize="7" fill="#333">- Emily Brown</text>
-                    <text x="55" y="105" fontSize="7" fill="#333">...</text>
+                    <text x="55" y="45" fontSize="7" fill="#333">- Aarib Khan</text>
+                    <text x="55" y="60" fontSize="7" fill="#333">- Utkarsha Chauhan</text>
+                    <text x="55" y="75" fontSize="7" fill="#333">- Sohail Khan</text>
+                    <text x="55" y="90" fontSize="7" fill="#333">- Isha Rajput</text>
+                    <text x="55" y="100" fontSize="7" fill="#333">.</text>
+                    <text x="55" y="105" fontSize="7" fill="#333">.</text>
+                    <text x="55" y="110" fontSize="7" fill="#333">.</text>
+                    <text x="55" y="115" fontSize="7" fill="#333">.</text>
+                    <text x="55" y="120" fontSize="7" fill="#333">.</text>
+                    <text x="55" y="125" fontSize="7" fill="#333">.</text>
                 </g>
 
                 {/* Second Window - Patient Details & Prescription (Shifted Further Right) */}
@@ -48,13 +53,13 @@ const PatientSVG = () => {
                         <circle id="yellow" fill="#D1A839" cx="16" cy="4" r="4"></circle>
                         <circle id="green" fill="#34B18F" cx="28" cy="4" r="4"></circle>
                     </g>
-                    <text x="80" y="30" fontSize="8" fill="#333" fontWeight="bold">Patient: Alice</text>
-                    <text x="100" y="45" fontSize="7" fill="#333">Age: 25</text>
-                    <text x="100" y="60" fontSize="7" fill="#333">Gender: Female</text>
+                    <text x="80" y="30" fontSize="8" fill="#333" fontWeight="bold">Patient: Aarib</text>
+                    <text x="100" y="45" fontSize="7" fill="#333">Age: 35</text>
+                    <text x="100" y="60" fontSize="7" fill="#333">Gender: Male</text>
                     <text x="100" y="75" fontSize="7" fill="#333">Date: 28/03/2025</text>
                     <text x="80" y="90" fontSize="7" fill="#333" fontWeight="bold">Prescription:</text>
-                    <text x="100" y="105" fontSize="7" fill="#333">- Paracetamol 500mg</text>
-                    <text x="100" y="120" fontSize="7" fill="#333">- Amoxicillin 250mg</text>
+                    <text x="100" y="105" fontSize="7" fill="#333">- Paracetamol 500mg 1-0-1</text>
+                    <text x="100" y="120" fontSize="7" fill="#333">- Amoxicillin 250mg 0-0-1</text>
                     <text x="100" y="130" fontSize="7" fill="#333">...</text>
                 </g>
             </g>
