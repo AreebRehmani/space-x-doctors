@@ -107,7 +107,7 @@ const LandingPage = () => {
                             </Typography>
 
                             <div id='get-start-btn' style={{ position: 'absolute', marginTop: '17%' }}>
-                                <button className="sparkles" style={{ zIndex: 99, height: '68px', width: '100%', marginLeft: '-1%' }}>
+                                <button onClick={() => navigate("signup")} className="sparkles" style={{ zIndex: 99, height: '68px', width: '100%', marginLeft: '-1%' }}>
                                     <span style={{ paddingTop: '10px', fontSize: '1em' }}>Get Started</span>
                                 </button>
                             </div>
@@ -260,7 +260,7 @@ const LandingPage = () => {
                             Every clinic is unique—so is our platform. Personalize dashboards, reports, and patient workflows just the way you want.
                         </Typography>
                         <div id='start-free-trial' style={{ maxWidth: '15vw', paddingTop: '6vh' }}>
-                            <button className="sparkles" style={{ zIndex: 99, height: '45px', width: '104%', marginLeft: '-1%' }}>
+                            <button onClick={() => navigate("signup")} className="sparkles" style={{ zIndex: 99, height: '45px', width: '104%', marginLeft: '-1%' }}>
                                 <span style={{ paddingTop: '7px', fontSize: '0.6em' }}>Start for free</span>
                             </button>
                         </div>

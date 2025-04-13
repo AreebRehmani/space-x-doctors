@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, TextField, Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import api from '../../app/services/api';
+import api from '../../app/api/base-api';
 
 const CreateUserPage = () => {
     const [username, setUsername] = useState('');

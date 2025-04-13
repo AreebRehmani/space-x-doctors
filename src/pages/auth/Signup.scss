@@ -1,0 +1,87 @@
+/* Main Layout - Splitting Left & Right */
+.login-page {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Left Side - Image */
+.login-left {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    background: rgba(0, 11, 15, 0.8);
+}
+
+/* Right Side - Login Form */
+.login-right {
+    width: 63%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+/* Login Form */
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    height: 89vh;
+    padding: 30px;
+    background: rgba(63, 255, 85, 0.084);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+
+    box-shadow: 0px 3px 15px rgba(55, 227, 227, 0.6),
+        0px 0px 0px rgba(43, 180, 226, 0.4),
+        0px 0px 60px rgba(138, 43, 226, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    position: absolute;
+}
+
+.login-btns {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #27b0a2;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    position: relative;
+    margin-top: 3vh;
+}
+
+.sparkles_2 {
+    --clr: 260;
+    --shadows: 0%;
+    --shadowl: 0%;
+
+    font-size: max(2.5vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 22px;
+    background: linear-gradient(0deg, hsl(0deg 0% 31.74%) 0%, hsl(260deg 1.29% 50.44%) 5%, hsl(0deg 0% 48.83%) 15%, hsl(187.49deg 76.58% 25.36%) 40%, hsl(181.73deg 81.31% 10.06%) 90%) !important;
+    background-size: 200% 300%;
+    background-position: 0% 0%;
+    box-shadow: inset 0 0 2px hsla(var(--clr), 30%, 20%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transform: translate(0px);
+
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+
+    box-shadow: 0 -0.5em 0.5em transparent, 0 0.5em 0.5em transparent, 0 0.5em 0.5em transparent, 0 0.5em 0.5em transparent,
+        0 0.25em 0.3em -0.2em hsla(var(--clr), 0%, 0%, 0.5),
+        0 0.35em 0.75em hsla(var(--clr), 0%, 0%, 0.75);
+}

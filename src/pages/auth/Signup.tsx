@@ -3,13 +3,13 @@ import { Box, Typography, Button, Link, Grid, IconButton } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../app/contexts/AuthContext';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'; // Import back icon
-import './Login.scss';
+import './Signup.scss';
 import { Engine, type ISourceOptions, type Container } from "@tsparticles/engine";
 import { polygonDeer } from '../../components/animations/ts-particles';
 import { loadAll } from '@tsparticles/all';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
-const LoginPage = () => {
+const Signup = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -74,7 +74,7 @@ const LoginPage = () => {
 
 
                     <Typography style={{ fontFamily: 'ui-monospace', marginTop: '3vh' }} variant="h4" component="h1" align="center">
-                        SpaceX Doctors <br />Login
+                        SpaceX Doctors <br />Signup
                     </Typography>
 
                     <div style={{ marginTop: '10vh' }}>
@@ -114,10 +114,11 @@ const LoginPage = () => {
             <div className="login-right">
                 {MemoizedParticles}
                 <Typography style={{ color: 'cadetblue', fontStyle: 'italic', zIndex: '99', marginLeft: '34vw', marginTop: '26vh' }}>
-                    Hover over the live internal anatomy visualization of the deer on this page to experience a futuristic concept: a hypothetical technology capable of tracking live veins and underlying body structures. Do you believe we are still far from achieving such innovations in medical science?                </Typography>
+                    - Future technology of Live X-Rays can soon possibly track veins and blood flow in real time. Hover on the Live X-Ray of Deer shown on this page, to expereince this futuristic vision.
+                </Typography>
             </div>
         </div>
     );
 };
 
-export default LoginPage;
+export default Signup;

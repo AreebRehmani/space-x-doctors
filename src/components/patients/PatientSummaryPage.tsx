@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardContent, CardHeader } from '@mui/material';
-import api from '../../app/services/api';
+import api from '../../app/api/base-api';
 
 const PatientSummaryPage = () => {
     const { id } = useParams();

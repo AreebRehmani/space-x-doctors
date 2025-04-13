@@ -32,7 +32,7 @@ const PatientSVG = () => {
                     <text x="55" y="60" fontSize="7" fill="#333">- Utkarsha Chauhan</text>
                     <text x="55" y="75" fontSize="7" fill="#333">- Sohail Khan</text>
                     <text x="55" y="90" fontSize="7" fill="#333">- Isha Rajput</text>
-                    <text x="55" y="100" fontSize="7" fill="#333">.</text>
+                    <text x="55" y="100" fontSize="7" fill="#333">- mahak shrivastav</text>
                     <text x="55" y="105" fontSize="7" fill="#333">.</text>
                     <text x="55" y="110" fontSize="7" fill="#333">.</text>
                     <text x="55" y="115" fontSize="7" fill="#333">.</text>

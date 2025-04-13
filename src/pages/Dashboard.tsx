@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, CardHeader } from '@mui/material';
 import { useAuth } from '../app/contexts/AuthContext';
-import api from '../app/services/api';
 import { PatientsChart } from '../components/charts/PatientsChart';
 import { RevenueChart } from '../components/charts/RevenueChart';
 import { RecentPatientsTable } from '../components/patients/RecentPatientsTable';
-
+import baseRequest from '../app/api/base-api';
 
 const Dashboard = () => {
     const [patientsData, setPatientsData] = useState<any>(null);
@@ -17,9 +16,9 @@ const Dashboard = () => {
         const fetchDashboardData = async () => {
             try {
                 const [patientsResponse, revenueResponse, recentPatientsResponse] = await Promise.all([
-                    api.get('/dashboard/patients'),
-                    api.get('/dashboard/revenue'),
-                    api.get('/patients/recent'),
+                    baseRequest.get('/dashboard/patients'),
+                    baseRequest.get('/dashboard/revenue'),
+                    baseRequest.get('/patients/recent'),
                 ]);
 
                 setPatientsData(patientsResponse.data);
