@@ -4,6 +4,9 @@ import { Plan } from "./purchase-plan";
 import { Role } from "../role";
 import { DoctorTimings } from "./timings";
 import { Worker } from "./worker";
+import { DailyRevenue } from "./daily-revenue";
+import { MonthlyRevenue } from "./monthly-revenue";
+import { CustomRevenue } from "./custom-revenue";
 
 export interface Doctor {
     uuid: string;
@@ -26,9 +29,17 @@ export interface Doctor {
     // e.g. can sit 2 times in a day
     doctorTimings: DoctorTimings[];
 
+    // Doctor has many to many relation with Hospital
     hospitals: Hospital[];
 
+    // Doctor has one to many realtion with Patient
     patients: Patient[];
+
+    dailyRevenues: DailyRevenue[];
+    monthlyRevenues: MonthlyRevenue[];
+
+    // custom Revenue is a search result Query
+    customRevenue: CustomRevenue;
 
     disabled: boolean;
 

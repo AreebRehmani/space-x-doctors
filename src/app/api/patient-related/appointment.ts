@@ -8,6 +8,7 @@ export interface Appointment {
     pateint: Patient;
     doctor: Doctor;
 
+    dailySerialNumber: number;
     date: string;
     appointmentFee: number | null;
 
@@ -24,6 +25,15 @@ export interface Appointment {
 
     currentSituationNote?: string;
     improvementNote?: string;
+
+    stage: AppointmentStage;
+}
+
+export enum AppointmentStage {
+    WAITING = 0,
+    CONFIRMED = 1,
+    DOCTOR_DONE = 2,
+    CHEMIST_DONE = 3
 }
 
 export enum PayementType {

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ScriptableContext } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-interface RevenueChartProps {
+interface PatientsChartProps {
     data: {
         labels: string[];
         datasets: {
@@ -15,12 +15,12 @@ interface RevenueChartProps {
     };
 }
 
-export const PatientsChart = ({ data }: RevenueChartProps) => {
+export const ChemistRevenueChart = ({ data }: PatientsChartProps) => {
     const processedData = {
         ...data,
         datasets: data.datasets.map(dataset => ({
             ...dataset,
-            backgroundColor: ['rgb(0, 153, 255)']
+            backgroundColor: ['rgb(3, 189, 222)']
         }))
     };
 
@@ -54,7 +54,7 @@ export const PatientsChart = ({ data }: RevenueChartProps) => {
                     bar: {
                         borderRadius: 8,
                         borderWidth: 2,
-                        borderColor: 'rgba(0, 179, 255, 0.9)',
+                        borderColor: 'rgba(0, 229, 255, 0.9)',
                         borderSkipped: false
                     }
                 }

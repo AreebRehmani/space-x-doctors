@@ -11,6 +11,9 @@ export interface Medicine {
 
     hospital: Hospital;
 
+    pricePerItem: string;
+    profitPerItem: string | null;
+
     createdByDoctor: Doctor | null;
     createdByWorker: Worker | null;
 }

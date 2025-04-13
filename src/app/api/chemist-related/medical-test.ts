@@ -1,9 +1,11 @@
+import { Doctor } from "../doctor-related/doctor";
 import { Hospital } from "../doctor-related/hospital";
 
 export interface MedicalTest {
     name: string;
 
-    hospital: Hospital;
+    requestedByHospital: Hospital;
+    requestedByDoctor: Doctor;
 
     testNote: string | null;
 

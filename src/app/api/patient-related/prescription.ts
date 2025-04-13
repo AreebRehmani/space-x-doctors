@@ -18,5 +18,9 @@ export interface Prescription {
 
     patient: Patient;
     doctor: Doctor;
+
+    // Chemist has to mark true, if sold successfully
+    delivered: boolean;
+
     appointment: Appointment;
 }
