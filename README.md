@@ -1,6 +1,6 @@
 # Space-X Doctors - Healthcare Management Platform 🚀🩺
 
-![Project Screenshot](public/pics/clients-main.png)
+![Project Screenshot](public/pics/cutout.png)
 
 ## Overview
 
