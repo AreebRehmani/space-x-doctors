@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Container, Typography, Grid, Card, CardContent, CardHeader, List, ListItemButton, ListItemText, Button, Icon } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Box, Container, Typography, List, ListItemButton, ListItemText } from '@mui/material';
 import { useAuth } from '../app/contexts/AuthContext';
-import { AppointmentsRevenueChart } from '../components/charts/AppointmentsRevenueChart';
 import baseRequest from '../app/api/base-api';
-import { toIndianFormat } from '../utils/converters';
-import { ChemistRevenueChart } from '../components/charts/ChemistRevenueChart';
-import { PatientsChart } from '../components/charts/PatientsChart';
 import MyOverview from '../components/dashboard/MyOverview';
 
 export type selectedMenu = 'appointments' | 'workers' | 'create-medicine' | 'my-dashboard' | 'search-patient' | 'new-appointment';
@@ -34,7 +30,7 @@ const Dashboard = (): JSX.Element => {
             case 'search-patient':
                 return <hr />;
             default:
-                return <hr />;
+                return <h2 style={{ color: 'cyan' }}>{'Something went wrong :(  Please Reload this page.'}</h2>;
         }
     };
 

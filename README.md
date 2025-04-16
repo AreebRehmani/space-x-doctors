@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Space-X Doctors - Healthcare Management Platform 🚀🩺
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Screenshot](public/pics/clients-main.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Space-X Doctors is a modern, web-based platform designed to streamline interactions and operations within a healthcare ecosystem. It connects doctors, patients, chemists, and administrators, providing tools for efficient management of appointments, patient records, prescriptions, revenue, and more.
 
-### `npm start`
+Built with React, TypeScript, and Material UI, it offers a responsive and intuitive user interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Key Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*   **Role-Based Access:** Dedicated interfaces and functionalities for Doctors, Patients, Chemists, and Administrators.
+*   **Appointment Management:** Patients can book appointments, and doctors can manage their schedules.
+*   **Patient Records:** Secure storage and access to patient information and history.
+*   **Prescription Handling:** Doctors can issue prescriptions, and chemists can manage them.
+*   **Revenue Tracking:** Tools for doctors and administrators to monitor daily, monthly, and custom revenue streams.
+*   **Inventory Management (Chemist):** Tracking medical equipment, tests, and medicines.
+*   **User Administration:** Admins can manage users and roles within the platform.
+*   **Interactive Dashboard:** Visualizations and charts (using Chart.js) for key metrics like appointments, revenue, and patient numbers.
+*   **Authentication:** Secure login and signup functionality with context-based authentication state management.
+*   **Engaging UI:** Features particle animations (`tsparticles`) for a dynamic user experience.
 
-### `npm test`
+## 💻 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   **Frontend:** React, TypeScript
+*   **UI Library:** Material UI (@mui/material)
+*   **Routing:** React Router
+*   **State Management:** React Context API (likely for AuthContext)
+*   **API Communication:** Axios
+*   **Charting:** Chart.js, react-chartjs-2
+*   **Animations:** tsParticles, React Spring
+*   **Development/Build:** Create React App (react-scripts), Webpack
+*   **Component Library/Testing:** Storybook
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*   Node.js and npm (or yarn) installed on your system.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation & Running
 
-### `npm run eject`
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repository-url>
+    cd space-x-doctors
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm start
+    ```
+    This will open the application in your default browser at [http://localhost:3000](http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🛠️ Available Scripts
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+*   `npm start`: Runs the app in development mode.
+*   `npm run build`: Builds the app for production.
+*   `npm test`: Runs the test suite.
+*   `npm run storybook`: Starts the Storybook component library viewer.
+*   `npm run build-storybook`: Builds the static Storybook site.
